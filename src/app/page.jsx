@@ -1,12 +1,27 @@
 import Navbar from '@/components/Navbar';
-import Image from 'next/image';
+import Results from '@/components/Results';
 
-export default function Home() {
+const API_KEY = process.env.API_KEY;
+
+export default async function Home({ searchParams }) {
+  const genre = searchParams.genre || 'fetchTrending';
+  const res = await fetch(
+    `https://api.themoviedb.org/3${
+      genre === 'fetchTopRated' ? `/movie/top_rated` : `/trending/all/week`
+    }?api_key=${API_KEY}&language=en-US&page=1`,
+  );
+
+  const data = await res.json();
+  if (!res.ok) {
+    throw new Error('Failed to fetch data from API');
+  }
+  const results = data.results;
+
   return (
     <div>
       <Navbar />
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="text-4xl font-bold mt-10">Welcome to MOVIEDB</h1>
+      <div className="">
+        <Results results={results} />
       </div>
     </div>
   );
