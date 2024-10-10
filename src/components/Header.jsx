@@ -7,10 +7,10 @@ import DarkModeSwitch from './DarkModeSwitch';
 
 export default function Header() {
   return (
-    <div className="shadow-lg">
+    <div className="">
       <div className="flex justify-between items-center p-3 max-w-6xl mx-auto">
         <Link href={'/'} className="flex gap-1 items-center">
-          <span className="text-3xl font-black bg-amber-500 py-2 px-2 rounded-lg">
+          <span className="text-3xl font-black bg-[#ff6347] py-2 px-2 rounded-lg">
             MDb
           </span>
         </Link>
