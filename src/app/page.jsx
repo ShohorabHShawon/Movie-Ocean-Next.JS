@@ -1,6 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Results from '@/components/Results';
-import { resolve } from 'styled-jsx/css';
+import SearchBox from '@/components/SearchBox';
 
 const API_KEY = process.env.API_KEY;
 
@@ -22,6 +22,7 @@ export default async function Home({ searchParams }) {
   return (
     <div>
       <Navbar />
+      <SearchBox />
       <div className="">
         <Results results={results} />
       </div>
