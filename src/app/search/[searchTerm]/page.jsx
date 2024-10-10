@@ -1,3 +1,5 @@
+import BackButton from '@/components/BackButton';
+import Navbar from '@/components/Navbar';
 import Results from '@/components/Results';
 import SearchBox from '@/components/SearchBox';
 import React from 'react';
@@ -12,6 +14,7 @@ export default async function SearchPage({ params }) {
 
   return (
     <div>
+      <Navbar />
       <SearchBox />
       {result &&
         result.length ===

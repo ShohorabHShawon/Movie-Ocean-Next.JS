@@ -1,7 +1,6 @@
+import BackButton from '@/components/BackButton';
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
-import { HiArrowCircleLeft } from 'react-icons/hi';
 
 export default async function MoviePage({ params }) {
   const movieId = params.id;
@@ -12,11 +11,7 @@ export default async function MoviePage({ params }) {
 
   return (
     <div className="w-full flex justify-center">
-      <Link href={'/'} className="text-4xl hover:text-[#ff6347]">
-        <button>
-          <HiArrowCircleLeft />{' '}
-        </button>
-      </Link>
+      <BackButton />
       <div className="max-w-[90%] w-full relative ">
         <Image
           src={`https://image.tmdb.org/t/p/original/${
