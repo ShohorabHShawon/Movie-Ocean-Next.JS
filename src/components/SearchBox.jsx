@@ -14,8 +14,8 @@ export default function SearchBox() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex px-4 m-2 py-3 rounded-md border-2 border-[#ff6347] overflow-hidden max-w-md mx-auto 
-      font-[sans-serif]"
+      className="flex px-4 mt-8 py-3 border-2 overflow-hidden max-w-md mx-auto 
+      font-[sans-serif] rounded-full shadow-md"
       action=""
     >
       <input

@@ -2,12 +2,12 @@
 import React from 'react';
 import { useEffect } from 'react';
 
-export default function error({ error, reset }) {
+export default function Error({ error, reset }) {
   useEffect(() => {
     setTimeout(() => {
       reset();
     }, 5000);
-  }, [error]);
+  }, [error, reset]);
   return (
     <div className="text-center mt-10 font-bold">
       <h1>Something went wrong. Please try again!</h1>
