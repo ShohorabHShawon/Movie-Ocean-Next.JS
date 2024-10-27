@@ -16,7 +16,7 @@ export default function Header() {
             alt="logo"
             width={170}
             height={0}
-            className="mt-5"
+            className="m-5"
           />
         </Link>
         <div className="flex items-center gap-4 mt-3">
