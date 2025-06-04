@@ -1,7 +1,7 @@
 import React from 'react';
+import { FcHome } from 'react-icons/fc';
+import { FcAbout } from 'react-icons/fc';
 import MenuItem from '@/components/MenuItem';
-import { AiFillHome } from 'react-icons/ai';
-import { BsFillInfoCircleFill } from 'react-icons/bs';
 import Link from 'next/link';
 import DarkModeSwitch from './DarkModeSwitch';
 import Image from 'next/image';
@@ -9,7 +9,7 @@ import Image from 'next/image';
 export default function Header() {
   return (
     <div className="">
-      <div className="flex justify-between items-center max-w-6xl mx-auto">
+      <div className="flex justify-between items-center max-w-7xl mx-auto">
         <Link href={'/'} className="flex gap-1 items-center">
           <Image
             src="/logo.png"
@@ -19,15 +19,11 @@ export default function Header() {
             className="m-5"
           />
         </Link>
-        <div className="flex items-center gap-4 mt-3">
+        <div className="flex items-center gap-4 mt-3 mx-5">
           <DarkModeSwitch />
           <div className="flex gap-4 font-bold">
-            <MenuItem title="Home" address="/" Icon={AiFillHome} />
-            <MenuItem
-              title="About"
-              address="/about"
-              Icon={BsFillInfoCircleFill}
-            />
+            <MenuItem title="Home" address="/" Icon={FcHome} />
+            <MenuItem title="About" address="/about" Icon={FcAbout} />
           </div>
         </div>
       </div>

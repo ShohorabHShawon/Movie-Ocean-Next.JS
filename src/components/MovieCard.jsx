@@ -5,7 +5,7 @@ import { FiThumbsUp } from 'react-icons/fi';
 
 export default function MovieCard({ result }) {
   return (
-    <div className="my-4 mx-3 rounded-lg">
+    <div className="my-4 mx-3 rounded-lg dark:bg-gray-800">
       <div className="shadow-xl hover:scale-110 transition duration-300 ease-in-out rounded-lg p-2">
         <Link href={`/movie/${result.id}`}>
           <Image
@@ -22,7 +22,12 @@ export default function MovieCard({ result }) {
             </h1>
 
             <p className="flex items-center justify-between">
-              <span>{result.release_date || result.first_air_date}</span>
+              <span>
+                {(result.release_date || result.first_air_date)?.substring(
+                  0,
+                  4,
+                )}
+              </span>
               <span className="flex items-center ml-auto">
                 <FiThumbsUp className="h-5 w-5 mx-2" />
                 {result.vote_count}
