@@ -33,7 +33,7 @@ export default async function SearchPage({ params }) {
 
           <div className="mb-6">
             <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
-              Search Results for: "{decodeURIComponent(searchTerm)}"
+              Search Results for: &quot;{decodeURIComponent(searchTerm)}&quot;
             </h1>
             {results && (
               <p className="text-gray-600 dark:text-gray-400 mt-2">

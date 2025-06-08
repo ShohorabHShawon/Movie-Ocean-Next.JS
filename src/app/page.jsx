@@ -57,7 +57,6 @@ export default async function Home({ searchParams }) {
             <h2 className="text-3xl font-bold mb-2 bg-gradient-to-r from-yellow-500 dark:from-yellow-400 to-orange-500 dark:to-orange-400 bg-clip-text text-transparent">
           🔥 Trending Top 5
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 mb-8">The hottest movies everyone's talking about</p>
             <p className="text-gray-600 dark:text-gray-400 mb-8">The hottest movies everyone&apos;s talking about</p>
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {topTrending.map((movie, index) => (
