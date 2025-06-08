@@ -1,4 +1,3 @@
-import Navbar from '@/components/Navbar';
 import Results from '@/components/Results';
 import SearchBox from '@/components/SearchBox';
 import Image from 'next/image';
@@ -59,7 +58,7 @@ export default async function Home({ searchParams }) {
           🔥 Trending Top 5
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-8">The hottest movies everyone's talking about</p>
-            
+            <p className="text-gray-600 dark:text-gray-400 mb-8">The hottest movies everyone&apos;s talking about</p>
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {topTrending.map((movie, index) => (
             <a key={movie.id} href={`/movie/${movie.id}`} className="group relative block">
@@ -143,12 +142,12 @@ export default async function Home({ searchParams }) {
                 <li><a href="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Search</a></li>
               </ul>
             </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">About</h4>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">
-                Powered by The Movie Database (TMDB) API
-              </p>
-            </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">About</h4>
+            <p className="text-gray-600 dark:text-gray-400 text-sm">
+              Powered by The Movie Database (TMDB) API
+            </p>
+          </div>
           </div>
           <div className="border-t border-gray-300 dark:border-gray-700 mt-8 pt-8 text-center">
             <p className="text-gray-600 dark:text-gray-400 text-sm">
