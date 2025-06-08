@@ -9,7 +9,7 @@ export default function BackButton() {
     <div>
       {' '}
       <button
-        className="fixed mt-4 text-[#ff6347] text-4xl dark:hover:text-white hover:text-black z-50  transition duration-300 ease-in-out"
+        className="fixed top-25 left-4 xl:top-6 xl:left-6 text-[#ff6347] text-4xl dark:hover:text-white hover:text-black z-50 transition duration-300 ease-in-out"
         onClick={() => router.back()}
       >
         <HiArrowCircleLeft />
