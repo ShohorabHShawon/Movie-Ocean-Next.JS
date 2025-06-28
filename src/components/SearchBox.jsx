@@ -14,24 +14,29 @@ export default function SearchBox() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex px-4 mt-8 py-3 border-2 border-gray-600 bg-gray-800 overflow-hidden max-w-md mx-auto 
-      font-[sans-serif] rounded-full shadow-lg hover:border-gray-500 transition-colors duration-200"
-      action=""
+      className="relative flex items-center max-w-lg mx-auto mt-8"
     >
-      <input
-        type="text"
-        placeholder="Search Movies..."
-        className="w-full outline-none bg-transparent text-white placeholder-gray-400"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-      <button
-        className="disabled:hidden hover:scale-110 transition-transform duration-200"
-        type="submit"
-        disabled={search === ''}
-      >
-        <BsSearch className="h-6 w-6 text-[#ff6347] hover:text-orange-400" />
-      </button>
+      <div className="relative w-full">
+        <input
+          type="text"
+          placeholder="Search movies, TV shows..."
+          className="w-full pl-6 pr-14 py-4 bg-white/10 backdrop-blur-md border border-white/20 
+          rounded-2xl text-black dark:text-white placeholder-gray-600 dark:placeholder-gray-300 outline-none focus:border-blue-400 
+          focus:bg-white/15 transition-all duration-300 shadow-xl hover:shadow-2xl"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <button
+          type="submit"
+          disabled={search === ''}
+          className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2.5 
+          bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl text-white 
+          disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 
+          transition-all duration-200 shadow-lg hover:shadow-xl"
+        >
+          <BsSearch className="h-5 w-5" />
+        </button>
+      </div>
     </form>
   );
 }
