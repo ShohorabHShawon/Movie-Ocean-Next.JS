@@ -22,6 +22,16 @@ Visit [http://localhost:3000](http://localhost:3000) in your browser to view the
 
 Start editing by modifying `app/page.js`. Changes are reflected instantly.
 
+## 🔑 Environment Variables
+
+To connect to the MovieDB API, create a `.env.local` file in the root of your project with the following content:
+
+```env
+API_KEY = "Get your Api key form TMDB"
+```
+
+Replace `your_api_key_here` with your actual API key.
+
 ## 🖋 Features
 
 - Built with Next.js 13+ App Router
@@ -43,3 +53,4 @@ For more deployment options, see the [Next.js deployment docs](https://nextjs.or
 ---
 
 Feel free to contribute or provide feedback!
+
